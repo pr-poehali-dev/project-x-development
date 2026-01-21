@@ -1,4 +1,4 @@
-import { ChevronRight } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 export function ProductDirectionSection() {
   return (
@@ -16,8 +16,8 @@ export function ProductDirectionSection() {
         {/* Section label */}
         <div className="flex items-center gap-2 mb-6">
           <div className="w-3 h-3 rounded-full bg-green-500" />
-          <span className="text-zinc-400 text-sm">Проекты и долгосрочное планирование</span>
-          <ChevronRight className="w-4 h-4 text-zinc-500" />
+          <span className="text-zinc-400 text-sm">Автохимия и клининг</span>
+          <Icon name="ChevronRight" className="w-4 h-4 text-zinc-500" />
         </div>
 
         {/* Section heading */}
@@ -30,13 +30,12 @@ export function ProductDirectionSection() {
             lineHeight: 1.1,
           }}
         >
-          Задайте направление продукта
+          Решения для авто и профессиональной уборки
         </h2>
 
         {/* Description */}
         <p className="text-zinc-400 text-lg max-w-md mb-16">
-          <span className="text-white font-medium">Объедините команду вокруг единой дорожной карты.</span> Планируйте,
-          управляйте и отслеживайте все инициативы с помощью визуальных инструментов Orbit.
+          <span className="text-white font-medium">Профессиональные решения для вашего бизнеса.</span> Автошампуни, полироли, очистители и профессиональная химия для клининговых компаний.
         </p>
 
         {/* 3D Timeline Visualization */}
@@ -187,9 +186,9 @@ export function ProductDirectionSection() {
         <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left column - Manage projects end-to-end */}
           <div className="border-t border-r border-b border-zinc-800 pt-10 pr-10 pb-16">
-            <h3 className="text-xl font-medium text-zinc-200 mb-3">Управляйте проектами от А до Я</h3>
+            <h3 className="text-xl font-medium text-zinc-200 mb-3">Автохимия ifoam</h3>
             <p className="text-zinc-500 text-base leading-relaxed mb-8">
-              Объедините спецификации, этапы, задачи и документацию в одном месте.
+              Полная линейка средств по уходу за автомобилем: шампуни, полироли, очистители салона и стёкол.
             </p>
 
             <div className="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">

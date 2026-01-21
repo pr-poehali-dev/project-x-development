@@ -1,13 +1,13 @@
 import { motion } from "framer-motion"
-import { ChevronRight, Check, Paperclip, Globe, Lightbulb } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
-const agents = [
-  { name: "Cursor", isAgent: true, selected: true, icon: "◇" },
-  { name: "GitHub Copilot", isAgent: true, selected: false, icon: "◉" },
-  { name: "Sentry", isAgent: true, selected: false, icon: "◈" },
-  { name: "Leela", isAgent: false, selected: false, icon: "○" },
-  { name: "Codex", isAgent: true, selected: false, icon: "◎" },
-  { name: "Conor", isAgent: false, selected: false, icon: "○" },
+const products = [
+  { name: "Средства для мытья посуды", category: true, selected: true, icon: "◇" },
+  { name: "Универсальные очистители", category: true, selected: false, icon: "◉" },
+  { name: "Средства для стирки", category: true, selected: false, icon: "◈" },
+  { name: "Чистящие порошки", category: false, selected: false, icon: "○" },
+  { name: "Средства для ванной", category: true, selected: false, icon: "◎" },
+  { name: "Освежители воздуха", category: false, selected: false, icon: "○" },
 ]
 
 export function AISection() {
@@ -31,8 +31,8 @@ export function AISection() {
             className="flex items-center gap-2 mb-6"
           >
             <div className="w-2 h-2 rounded-full bg-blue-500" />
-            <span className="text-zinc-400 text-sm">Искусственный интеллект</span>
-            <ChevronRight className="w-4 h-4 text-zinc-500" />
+            <span className="text-zinc-400 text-sm">Бытовая химия</span>
+            <Icon name="ChevronRight" className="w-4 h-4 text-zinc-500" />
           </motion.div>
 
           {/* Heading */}
@@ -49,7 +49,7 @@ export function AISection() {
               lineHeight: 1.1,
             }}
           >
-            Разработка с ИИ-помощником
+            Широкий ассортимент для дома
           </motion.h2>
 
           {/* Description */}
@@ -60,8 +60,7 @@ export function AISection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-zinc-400 max-w-md mb-8"
           >
-            <span className="text-white font-medium">Orbit для агентов.</span> Выбирайте из множества ИИ-агентов и
-            делегируйте задачи: от генерации кода до других технических задач.
+            <span className="text-white font-medium">Профессиональная чистота каждый день.</span> Полная линейка средств для мытья посуды, стирки, уборки кухни и ванной комнаты.
           </motion.p>
 
           {/* Learn more button */}
@@ -72,8 +71,8 @@ export function AISection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="px-5 py-2.5 bg-zinc-800 text-zinc-300 rounded-lg border border-zinc-700 hover:bg-zinc-700 transition-colors text-sm flex items-center gap-2 mb-16"
           >
-            Подробнее
-            <ChevronRight className="w-4 h-4" />
+            Посмотреть каталог
+            <Icon name="ChevronRight" className="w-4 h-4" />
           </motion.button>
 
           {/* Agent dropdown mockup */}
@@ -135,16 +134,16 @@ export function AISection() {
 
                 {/* Input field */}
                 <div className="bg-zinc-800/50 border border-zinc-700 rounded-t-xl px-5 py-4">
-                  <span className="text-zinc-500 italic">Назначить...</span>
+                  <span className="text-zinc-500 italic">Выберите категорию...</span>
                 </div>
 
                 {/* Dropdown options */}
                 <div className="bg-zinc-900/80 border border-t-0 border-zinc-700 rounded-b-xl py-1">
-                  {agents.map((agent, index) => (
+                  {products.map((product, index) => (
                     <div
-                      key={agent.name}
+                      key={product.name}
                       style={
-                        agent.selected
+                        product.selected
                           ? {
                               transform: "scale(1.04) rotateX(17deg)",
                               background: "linear-gradient(#343434 0%, #2d2d2d 100%)",
@@ -172,15 +171,15 @@ export function AISection() {
                         }}
                       >
                         <div className="flex items-center gap-3">
-                          <span className="text-zinc-400 text-lg">{agent.icon}</span>
-                          <span className={agent.selected ? "text-white font-medium" : "text-zinc-300"}>
-                            {agent.name}
+                          <span className="text-zinc-400 text-lg">{product.icon}</span>
+                          <span className={product.selected ? "text-white font-medium" : "text-zinc-300"}>
+                            {product.name}
                           </span>
-                          {agent.isAgent && (
-                            <span className="text-xs bg-zinc-700 text-zinc-400 px-2 py-0.5 rounded">Агент</span>
+                          {product.category && (
+                            <span className="text-xs bg-zinc-700 text-zinc-400 px-2 py-0.5 rounded">Популярно</span>
                           )}
                         </div>
-                        {agent.selected && <Check className="w-4 h-4 text-zinc-400" />}
+                        {product.selected && <Icon name="Check" className="w-4 h-4 text-zinc-400" />}
                       </div>
                     </div>
                   ))}
@@ -200,9 +199,9 @@ export function AISection() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               {/* Left column */}
               <div className="border-t border-r border-b border-zinc-800/60 pt-12 pr-12 pb-16">
-                <h3 className="text-zinc-200 font-medium text-xl mb-3">Автопилот для продукта</h3>
+                <h3 className="text-zinc-200 font-medium text-xl mb-3">Экологичные формулы</h3>
                 <p className="text-zinc-500 text-base mb-8">
-                  Оптимизируйте рабочие процессы с ИИ-ассистентом для рутинных и ручных задач.
+                  Все средства разработаны с заботой об окружающей среде и безопасны для использования.
                 </p>
 
                 {/* Triage Intelligence Card */}
@@ -273,7 +272,7 @@ export function AISection() {
                     </div>
 
                     <button className="w-full flex items-center justify-center gap-2 bg-zinc-700/50 hover:bg-zinc-600/50 text-zinc-300 text-sm py-2.5 rounded-md transition-colors">
-                      <Check className="w-4 h-4" />
+                      <Icon name="Check" className="w-4 h-4" />
                       Принять
                     </button>
                   </div>
@@ -282,9 +281,9 @@ export function AISection() {
 
               {/* Right column */}
               <div className="border-t border-b border-zinc-800/60 pt-12 pl-12 pb-16">
-                <h3 className="text-zinc-200 font-medium text-xl mb-3">Orbit MCP</h3>
+                <h3 className="text-zinc-200 font-medium text-xl mb-3">Сертификаты качества</h3>
                 <p className="text-zinc-500 text-base mb-8">
-                  Подключите Orbit к любимым инструментам: Cursor, Claude, ChatGPT и другим.
+                  Вся продукция соответствует международным стандартам качества и безопасности.
                 </p>
 
                 {/* MCP Code Snippet */}
@@ -315,16 +314,16 @@ export function AISection() {
 
                     <div className="flex items-center gap-2">
                       <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
-                        <Paperclip className="w-3.5 h-3.5" />
-                        Файл
+                        <Icon name="ShieldCheck" className="w-3.5 h-3.5" />
+                        ГОСТ
                       </button>
                       <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
-                        <Globe className="w-3.5 h-3.5" />
-                        Поиск
+                        <Icon name="Award" className="w-3.5 h-3.5" />
+                        ISO 9001
                       </button>
                       <button className="flex items-center gap-1.5 border border-zinc-700/60 text-zinc-500 text-sm px-3 py-1.5 rounded-full hover:bg-zinc-700/30 transition-colors">
-                        <Lightbulb className="w-3.5 h-3.5" />
-                        Анализ
+                        <Icon name="Leaf" className="w-3.5 h-3.5" />
+                        Eco-friendly
                       </button>
                     </div>
                   </div>

@@ -1,54 +1,54 @@
 import { useState } from "react"
-import { ChevronLeft, ChevronRight, Plus, ArrowRight, MessageSquare, GitBranch, X, Puzzle, Figma } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 const carouselCards = [
   {
     id: 1,
-    category: "Запросы клиентов",
-    title: "Создавайте то, что нужно клиентам",
-    icon: ArrowRight,
+    category: "Средства для мытья посуды",
+    title: "Эффективно удаляют жир и загрязнения",
+    icon: "ArrowRight",
     mockup: "intercom",
   },
   {
     id: 2,
-    category: "Git-интеграция",
-    title: "Автоматизируйте PR и коммиты",
-    icon: Plus,
+    category: "Автошампунь",
+    title: "Безопасная очистка кузова с пенным эффектом",
+    icon: "Plus",
     mockup: "github",
   },
   {
     id: 3,
-    category: "Orbit Mobile",
-    title: "Управляйте работой откуда угодно",
-    icon: ArrowRight,
+    category: "Полироль для авто",
+    title: "Защита и блеск лакокрасочного покрытия",
+    icon: "ArrowRight",
     mockup: "mobile",
   },
   {
     id: 4,
-    category: "Orbit Asks",
-    title: "Превращайте запросы в задачи",
-    icon: ArrowRight,
+    category: "Очистители салона",
+    title: "Удаление пятен с обивки и пластика",
+    icon: "ArrowRight",
     mockup: "asks",
   },
   {
     id: 5,
-    category: "Интеграции Orbit",
-    title: "100+ способов расширить возможности",
-    icon: ArrowRight,
+    category: "Концентраты для клининга",
+    title: "Экономичные решения для профессионалов",
+    icon: "ArrowRight",
     mockup: "integrations",
   },
   {
     id: 6,
-    category: "Интеграция с Figma",
-    title: "Связь между разработкой и дизайном",
-    icon: ArrowRight,
+    category: "Дезинфицирующие средства",
+    title: "Уничтожение бактерий и вирусов",
+    icon: "ArrowRight",
     mockup: "figma",
   },
   {
     id: 7,
-    category: "Для разработчиков",
-    title: "Создавайте плагины через Orbit API",
-    icon: ArrowRight,
+    category: "Универсальные очистители",
+    title: "Для всех типов поверхностей",
+    icon: "ArrowRight",
     mockup: "api",
   },
 ]
@@ -57,8 +57,8 @@ function IntercomMockup() {
   return (
     <div className="flex flex-col gap-3 p-4">
       <div className="flex items-center gap-2 text-xs text-zinc-400">
-        <MessageSquare className="w-3.5 h-3.5" />
-        <span>Intercom</span>
+        <Icon name="Droplets" className="w-3.5 h-3.5" />
+        <span>ifoam</span>
         <span className="text-zinc-600">·</span>
         <span className="text-zinc-500">sarah@example.com</span>
       </div>
@@ -97,8 +97,8 @@ function GitHubMockup() {
   return (
     <div className="flex flex-col gap-2 p-4">
       <div className="flex items-center gap-2 text-xs">
-        <GitBranch className="w-3.5 h-3.5 text-zinc-500" />
-        <span className="text-zinc-400">#20319</span>
+        <Icon name="Package" className="w-3.5 h-3.5 text-zinc-500" />
+        <span className="text-zinc-400">Арт. 20319</span>
         <span className="text-zinc-500">igor/lin 15287</span>
         <span className="text-blue-400/70">add sourc...</span>
       </div>
@@ -153,7 +153,7 @@ function AsksMockup() {
   return (
     <div className="flex items-center justify-center h-full">
       <div className="w-24 h-24 rounded-2xl bg-zinc-800 flex items-center justify-center">
-        <X className="w-12 h-12 text-zinc-400" strokeWidth={2.5} />
+        <Icon name="Sparkles" className="w-12 h-12 text-zinc-400" strokeWidth={2.5} />
       </div>
     </div>
   )
@@ -165,7 +165,7 @@ function IntegrationsMockup() {
       <div className="grid grid-cols-2 gap-2">
         {[1, 2, 3, 4].map((i) => (
           <div key={i} className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center">
-            <Puzzle className="w-5 h-5 text-zinc-500" />
+            <Icon name="Droplets" className="w-5 h-5 text-zinc-500" />
           </div>
         ))}
       </div>
@@ -177,7 +177,7 @@ function FigmaMockup() {
   return (
     <div className="flex items-center justify-center h-full">
       <div className="relative">
-        <Figma className="w-16 h-16 text-zinc-400" />
+        <Icon name="Leaf" className="w-16 h-16 text-zinc-400" />
       </div>
     </div>
   )
@@ -243,22 +243,21 @@ export function WorkflowsSection() {
             {/* Orange indicator */}
             <div className="flex items-center gap-2 mb-6">
               <div className="w-2 h-2 rounded-full bg-orange-500" />
-              <span className="text-sm text-zinc-400">Процессы и интеграции</span>
-              <ChevronRight className="w-4 h-4 text-zinc-600" />
+              <span className="text-sm text-zinc-400">Каталог продукции</span>
+              <Icon name="ChevronRight" className="w-4 h-4 text-zinc-600" />
             </div>
 
             {/* Heading */}
             <h2 className="text-4xl md:text-5xl font-medium text-white leading-[1.1]">
-              Работайте слаженно
+              Ассортимент продукции
               <br />
-              между инструментами
+              ifoam
             </h2>
           </div>
 
           {/* Description */}
           <p className="text-zinc-400 lg:max-w-sm lg:pt-12">
-            Расширьте возможности Orbit с помощью интеграций, которые синхронизируют всю команду и держат фокус на
-            главном.
+            От бытовой химии до профессиональных средств для клининга. Всё для чистоты вашего дома и автомобиля.
           </p>
         </div>
 
@@ -293,7 +292,7 @@ export function WorkflowsSection() {
                       </div>
                       {/* Icon button - fixed size, vertically centered */}
                       <button className="flex-shrink-0 w-8 h-8 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-500 hover:text-zinc-300 hover:border-zinc-600 transition-colors">
-                        <card.icon className="w-4 h-4" />
+                        <Icon name={card.icon} className="w-4 h-4" />
                       </button>
                     </div>
                   </div>
@@ -310,14 +309,14 @@ export function WorkflowsSection() {
             className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             disabled={scrollPosition === 0}
           >
-            <ChevronLeft className="w-5 h-5" />
+            <Icon name="ChevronLeft" className="w-5 h-5" />
           </button>
           <button
             onClick={scrollRight}
             className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:text-white hover:border-zinc-500 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
             disabled={scrollPosition >= carouselCards.length - 4}
           >
-            <ChevronRight className="w-5 h-5" />
+            <Icon name="ChevronRight" className="w-5 h-5" />
           </button>
         </div>
       </div>
