@@ -1,9 +1,9 @@
 import { motion } from "framer-motion"
-import { ChevronRight, Plus } from "lucide-react"
+import Icon from "@/components/ui/icon"
 
 const featureCards = [
   {
-    title: "Планирование спринтов",
+    title: "Бытовая химия",
     illustration: (
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden rounded-lg">
         <svg
@@ -51,7 +51,7 @@ const featureCards = [
     ),
   },
   {
-    title: "Управление итерациями",
+    title: "Автохимия",
     illustration: (
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
         <img
@@ -64,7 +64,7 @@ const featureCards = [
     ),
   },
   {
-    title: "Когда важна точность",
+    title: "Химия для клининга",
     illustration: (
       <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
         <img
@@ -105,7 +105,7 @@ export function FeatureCardsSection() {
                 lineHeight: 1.1,
               }}
             >
-              Создан для современных команд
+              Линейки продукции ifoam
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -115,10 +115,10 @@ export function FeatureCardsSection() {
               className="max-w-md"
             >
               <p className="text-zinc-400 leading-relaxed">
-                Orbit основан на практиках и принципах, которые отличают лучшие продуктовые команды:
-                фокус на главном, быстрое исполнение и внимание к качеству.{" "}
+                Три направления профессиональной химии для дома, автомобиля и бизнеса.
+                Качество, эффективность и забота об окружающей среде.{" "}
                 <a href="#" className="text-white inline-flex items-center gap-1 hover:underline">
-                  Перейти на Orbit <ChevronRight className="w-4 h-4" />
+                  Стать партнёром <Icon name="ChevronRight" className="w-4 h-4" />
                 </a>
               </p>
             </motion.div>
@@ -156,7 +156,7 @@ export function FeatureCardsSection() {
                 >
                   <h3 className="text-white font-medium text-lg leading-tight">{card.title}</h3>
                   <div className="w-8 h-8 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-500 group-hover:border-zinc-500 group-hover:text-zinc-300 transition-colors flex-shrink-0">
-                    <Plus className="w-4 h-4" />
+                    <Icon name="Plus" className="w-4 h-4" />
                   </div>
                 </div>
               </motion.div>
